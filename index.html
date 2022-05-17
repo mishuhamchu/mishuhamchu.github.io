@@ -14259,8 +14259,30 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Introduction</strong>
-Spotify is a service I use all the time, and I've noticed that I often listen to German Music. That got me thinking; just how different is the music in germany and the U.S?</p>
+<p><font size = "20">CMSC320 Final Project: Spotify Data Analysis for Germany and the U.S</font></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><font size = "10">Created by Michael Woods </font></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>Introduction</strong></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Spotify is a service I use all the time, and I've noticed that I often listen to German Music. That got me thinking; just how different is the music in germany and the U.S?</p>
 <p>First, let's go over the importance of music in germany. Germany served as the source of many popular genres today, such as Classical Music, Electronic and more. They still serve as one of the major musical industries in the world, and are known for their experimental music.</p>
 <p>The United States in another one of the largest musical industries in the world, with their influence spreading throughout the globe. Now, I tend to prefer german music, but this begs the question; is here really a difference in the music popular in Germany and the United States? I will examine this question from looking at the top 200 for each country from 2017 onwards using Spotipy. Spotipy is a library that allows me to extract music features; The features I will be looking at are danceability, energy, key, loudness, mode, speechines, acousticness, instrumentalness, liveliness, valence and tempo. I will also be comparing the popular genres of the two countries, and finally I will create a classifer to see if a given song would most likely be in the top 10 in Germany or the United States.</p>
 
@@ -14274,7 +14296,7 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">spotipy</span>
@@ -14296,7 +14318,7 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#chart I am using</span>
@@ -14332,9 +14354,9 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_1728/3452759185.py:8: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+<pre>/tmp/ipykernel_16214/3452759185.py:8: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
   america_df = newEntry_df[spotifySongs[&#34;region&#34;] == &#34;United States&#34;]
-/tmp/ipykernel_1728/3452759185.py:10: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+/tmp/ipykernel_16214/3452759185.py:10: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
   german_df = newEntry_df[spotifySongs[&#34;region&#34;] == &#34;Germany&#34;]
 </pre>
 </div>
@@ -14347,7 +14369,7 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#getting the top 200 songs; the data set also includes top50, and I want as much data as possible so I am going with top200</span>
@@ -14363,7 +14385,7 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#getting the data</span>
@@ -14411,7 +14433,7 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#since my dataset does not have the genre for the uri, I </span>
@@ -14471,367 +14493,17 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">america_df_final</span><span class="p">[</span><span class="s2">&quot;genre&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">america_df_final</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">germany_df_final</span><span class="p">[</span><span class="s2">&quot;genre&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">germany_df_final</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">get_genre</span><span class="p">(</span><span class="n">germany_df_final</span><span class="p">)</span>
-<span class="n">get_genre</span><span class="p">(</span><span class="n">america_df_final</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">america_df_final</span> <span class="o">=</span> <span class="n">america_df_final</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#here, I am grabbing 500 samples at most so I can make this nonbiase</span>
+<span class="n">america_df_final</span> <span class="o">=</span> <span class="n">america_df_final</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 <span class="n">germany_df_final</span> <span class="o">=</span> <span class="n">germany_df_final</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
-<span class="n">germany_df_final</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>danceability</th>
-      <th>energy</th>
-      <th>key</th>
-      <th>loudness</th>
-      <th>mode</th>
-      <th>speechiness</th>
-      <th>acousticness</th>
-      <th>instrumentalness</th>
-      <th>liveness</th>
-      <th>valence</th>
-      <th>...</th>
-      <th>time_signature</th>
-      <th>rank</th>
-      <th>artist</th>
-      <th>title</th>
-      <th>date</th>
-      <th>chart</th>
-      <th>trend</th>
-      <th>streams</th>
-      <th>region</th>
-      <th>genre</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>234</th>
-      <td>0.838</td>
-      <td>0.66</td>
-      <td>7</td>
-      <td>-5.61</td>
-      <td>0</td>
-      <td>0.155</td>
-      <td>0.284</td>
-      <td>0</td>
-      <td>0.0898</td>
-      <td>0.364</td>
-      <td>...</td>
-      <td>4</td>
-      <td>7.0</td>
-      <td>Nimo, Capo</td>
-      <td>Leyla</td>
-      <td>2019-02-15</td>
-      <td>top200</td>
-      <td>NEW_ENTRY</td>
-      <td>455936.0</td>
-      <td>Germany</td>
-      <td>hip hop</td>
-    </tr>
-    <tr>
-      <th>203</th>
-      <td>0.721</td>
-      <td>0.647</td>
-      <td>11</td>
-      <td>-7.039</td>
-      <td>1</td>
-      <td>0.189</td>
-      <td>0.0513</td>
-      <td>0.0026</td>
-      <td>0.2</td>
-      <td>0.56</td>
-      <td>...</td>
-      <td>4</td>
-      <td>7.0</td>
-      <td>RIN</td>
-      <td>Fabergé</td>
-      <td>2019-09-27</td>
-      <td>top200</td>
-      <td>NEW_ENTRY</td>
-      <td>838736.0</td>
-      <td>Germany</td>
-      <td>rap</td>
-    </tr>
-    <tr>
-      <th>170</th>
-      <td>0.821</td>
-      <td>0.767</td>
-      <td>0</td>
-      <td>-4.934</td>
-      <td>0</td>
-      <td>0.275</td>
-      <td>0.105</td>
-      <td>0.00434</td>
-      <td>0.117</td>
-      <td>0.698</td>
-      <td>...</td>
-      <td>4</td>
-      <td>3.0</td>
-      <td>RIN</td>
-      <td>Vintage</td>
-      <td>2019-05-24</td>
-      <td>top200</td>
-      <td>NEW_ENTRY</td>
-      <td>815384.0</td>
-      <td>Germany</td>
-      <td>rap</td>
-    </tr>
-    <tr>
-      <th>191</th>
-      <td>0.557</td>
-      <td>0.722</td>
-      <td>3</td>
-      <td>-7.832</td>
-      <td>0</td>
-      <td>0.307</td>
-      <td>0.279</td>
-      <td>0.000011</td>
-      <td>0.117</td>
-      <td>0.231</td>
-      <td>...</td>
-      <td>4</td>
-      <td>2.0</td>
-      <td>Gzuz, Bonez MC, Maxwell, Ufo361</td>
-      <td>Über Nacht</td>
-      <td>2018-05-18</td>
-      <td>top200</td>
-      <td>NEW_ENTRY</td>
-      <td>544711.0</td>
-      <td>Germany</td>
-      <td>hip hop</td>
-    </tr>
-    <tr>
-      <th>414</th>
-      <td>0.844</td>
-      <td>0.784</td>
-      <td>2</td>
-      <td>-6.218</td>
-      <td>0</td>
-      <td>0.0346</td>
-      <td>0.47</td>
-      <td>0</td>
-      <td>0.245</td>
-      <td>0.95</td>
-      <td>...</td>
-      <td>4</td>
-      <td>6.0</td>
-      <td>RAF Camora</td>
-      <td>Puta Madre</td>
-      <td>2019-10-11</td>
-      <td>top200</td>
-      <td>NEW_ENTRY</td>
-      <td>611975.0</td>
-      <td>Germany</td>
-      <td>hip hop</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>0.819</td>
-      <td>0.835</td>
-      <td>8</td>
-      <td>-4.899</td>
-      <td>0</td>
-      <td>0.102</td>
-      <td>0.398</td>
-      <td>0.00674</td>
-      <td>0.252</td>
-      <td>0.703</td>
-      <td>...</td>
-      <td>4</td>
-      <td>1.0</td>
-      <td>RAF Camora, Bonez MC</td>
-      <td>Blaues Licht</td>
-      <td>2021-07-23</td>
-      <td>top200</td>
-      <td>NEW_ENTRY</td>
-      <td>960910.0</td>
-      <td>Germany</td>
-      <td>rap</td>
-    </tr>
-    <tr>
-      <th>361</th>
-      <td>0.645</td>
-      <td>0.741</td>
-      <td>5</td>
-      <td>-4.989</td>
-      <td>0</td>
-      <td>0.0339</td>
-      <td>0.0323</td>
-      <td>0</td>
-      <td>0.29</td>
-      <td>0.534</td>
-      <td>...</td>
-      <td>4</td>
-      <td>10.0</td>
-      <td>Axwell /\ Ingrosso</td>
-      <td>More Than You Know</td>
-      <td>2017-06-30</td>
-      <td>top200</td>
-      <td>NEW_ENTRY</td>
-      <td>282510.0</td>
-      <td>Germany</td>
-      <td>pop</td>
-    </tr>
-    <tr>
-      <th>308</th>
-      <td>0.831</td>
-      <td>0.601</td>
-      <td>4</td>
-      <td>-7.49</td>
-      <td>0</td>
-      <td>0.0599</td>
-      <td>0.361</td>
-      <td>0.00002</td>
-      <td>0.0915</td>
-      <td>0.198</td>
-      <td>...</td>
-      <td>4</td>
-      <td>4.0</td>
-      <td>Capo</td>
-      <td>Run Run Run</td>
-      <td>2019-08-02</td>
-      <td>top200</td>
-      <td>NEW_ENTRY</td>
-      <td>470817.0</td>
-      <td>Germany</td>
-      <td>hip hop</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>0.71</td>
-      <td>0.576</td>
-      <td>10</td>
-      <td>-7.321</td>
-      <td>0</td>
-      <td>0.532</td>
-      <td>0.0672</td>
-      <td>0</td>
-      <td>0.118</td>
-      <td>0.61</td>
-      <td>...</td>
-      <td>4</td>
-      <td>2.0</td>
-      <td>Shirin David</td>
-      <td>Schlechtes Vorbild</td>
-      <td>2021-11-12</td>
-      <td>top200</td>
-      <td>NEW_ENTRY</td>
-      <td>517147.0</td>
-      <td>Germany</td>
-      <td>rap</td>
-    </tr>
-    <tr>
-      <th>485</th>
-      <td>0.765</td>
-      <td>0.345</td>
-      <td>3</td>
-      <td>-10.672</td>
-      <td>0</td>
-      <td>0.169</td>
-      <td>0.168</td>
-      <td>0.000056</td>
-      <td>0.1</td>
-      <td>0.629</td>
-      <td>...</td>
-      <td>4</td>
-      <td>9.0</td>
-      <td>Jamule</td>
-      <td>MedMen</td>
-      <td>2020-06-19</td>
-      <td>top200</td>
-      <td>NEW_ENTRY</td>
-      <td>469051.0</td>
-      <td>Germany</td>
-      <td>hip hop</td>
-    </tr>
-  </tbody>
-</table>
-<p>500 rows × 27 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14840,7 +14512,8 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">compression_opts</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#the following was done for convience so I didn&#39;t have to call getData evertime I modified the data frame</span>
+<span class="n">compression_opts</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">,</span>
                         <span class="n">archive_name</span><span class="o">=</span><span class="s1">&#39;german_gen.csv&#39;</span><span class="p">)</span>  
 <span class="n">germany_df_final</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;german.zip&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
           <span class="n">compression</span><span class="o">=</span><span class="n">compression_opts</span><span class="p">)</span>  
@@ -14912,7 +14585,13 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Here, I will be plotting the features of the songs, to see if the popularity of a song is affected by particular features. Since we are looking at the top 10 songs, technically all of these songs are popular, but there is still variablity in the top 10.</p>
+<p><strong>Comparing the Features betweeen Germany and the U.S using violin plots</strong></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Here, I will be plotting the features of the songs, to see if the popularity of a song is affected by particular features. Since we are looking at the top 10 songs, technically all of these songs are popular, but there is still variablity in the top 10. I will be focusing on the differences between Germany and the U.S.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14993,7 +14672,6 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Comparing the features between Germany and the US</strong></p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16948,6 +16626,7 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 <span class="n">appended</span><span class="p">[</span><span class="s1">&#39;region_Cat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">appended</span><span class="p">[</span><span class="s1">&#39;region_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
 <span class="n">appended</span> <span class="o">=</span> <span class="n">shuffle</span><span class="p">(</span><span class="n">appended</span><span class="p">)</span>
 
+<span class="c1">#these re the features I will be comparing</span>
 <span class="n">ind</span> <span class="o">=</span> <span class="n">appended</span><span class="p">[</span>  <span class="p">[</span><span class="s2">&quot;danceability&quot;</span><span class="p">,</span><span class="s2">&quot;energy&quot;</span><span class="p">,</span><span class="s2">&quot;key&quot;</span><span class="p">,</span><span class="s2">&quot;loudness&quot;</span><span class="p">,</span><span class="s2">&quot;mode&quot;</span><span class="p">,</span><span class="s2">&quot;speechiness&quot;</span><span class="p">,</span><span class="s2">&quot;acousticness&quot;</span><span class="p">,</span><span class="s2">&quot;instrumentalness&quot;</span><span class="p">,</span><span class="s2">&quot;liveness&quot;</span><span class="p">]]</span>
          
 
@@ -17167,24 +16846,29 @@ Spotify is a service I use all the time, and I've noticed that I often listen to
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>It's not much of a change, but it seems our data is pretty accurate!</p>
+<p>It's not much of a change, but it seems our data is pretty accurate! Now we can effectively see if a song is in the top 10 of Germany or the US!</p>
 
 </div>
-</div>**Conclusion**
-Based on this data, it is possible to categorize whether a song
-would be in the top 10  in Germany or the US depending on the features and rank.
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>Conclusion</strong></p>
 
-To summarize, we scraped our data, and found the relationship between a country and a given feature using violin plots. We then plotted said data on a violin plot with it's respective rank to see if there was any significant variability between each rank. After finally comparing all the components nad seein their respective differences, we moved on to categorizing the data into genres.
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Based on this data, it is possible to categorize whether a song
+would be in the top 10  in Germany or the US depending on the features and rank.</p>
+<p>To summarize, we scraped our data, and found the relationship between a country and a given feature using violin plots. We then plotted said data on a violin plot with it's respective rank to see if there was any significant variability between each rank. After finally comparing all the components nad seein their respective differences, we moved on to categorizing the data into genres.</p>
+<p>In categorizing the data into genres, we detirmined how popular each genre was popular in its respective country. We detirmined that the U.S like hip hop more, while the German seemingly had more rap. Overall, genre did not seem like the most important indicator because of the strong overlap between genres.</p>
+<p>We also used a coorelation heatmap to detirmine how all the spotify features affect each other. What was the most interesting thing about the heatmap was the relationship between speechiness and danceability, where we found a positive coorealtion for the US, but a negative one for Germany.</p>
+<p>We also plotted a 
+Finally, we used a decision tree to classify if a song would belong in the top 10 of Germany or the US. With this, we got an accuracy of 62.8%; however, we could do better. Using a DecisionForest, we were able to find an even larger accuracy of 71.6%</p>
+<p>An interesting thing we can do more with this data is use other regions and compare all of them. This would be a lengthy project, but I'm sure it would be quite rewarding in discovering musical trends across the globe.</p>
 
-In categorizing the data into genres, we detirmined how popular each genre was popular in its respective country. We detirmined that the U.S like hip hop more, while the German seemingly had more rap. Overall, genre did not seem like the most important indicator because of the strong overlap between genres.
-
-
-We also used a coorelation heatmap to detirmine how all the spotify features affect each other. What was the most interesting thing about the heatmap was the relationship between speechiness and danceability, where we found a positive coorealtion for the US, but a negative one for Germany.
-
-We also plotted a 
-Finally, we used a decision tree to classify if a song would belong in the top 10 of Germany or the US. With this, we got an accuracy of 62.8%; however, we could do better. Using a DecisionForest, we were able to find an even larger accuracy of 71.6%
-
-An interesting thing we can do more with this data is use other regions and compare all of them. This would be a lengthy project, but I'm sure it would be quite rewarding in discovering musical trends across the globe.
+</div>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Overall, I found that my taste in german music over united states music is indeed founded by data; the difference is present in how we are able to classify a given song as german or from the united states. Since we were able to find a classification algorithim that was quite accurate, I can deduce that there is merit to my preference of german music over music from the states.</p>
